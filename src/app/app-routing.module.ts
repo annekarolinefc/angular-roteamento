@@ -6,7 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   //INSERINDO AS PÁGINAS
   {path: 'page1', component: Page1Component},
-  {path: 'page2', component: Page2Component}
+  //CRIANDO O INDEX
+  {path: '', redirectTo: 'page1', pathMatch: 'full'},
+  {path: 'page2/:id', component: Page2Component}
 ];
 
 @NgModule({
